@@ -244,18 +244,13 @@ int main(){
 	printf("You Win With Score : %d\n", score);
 	
 	// save player data ke file
-//	FILE *file = fopen("winner.data", "a"); //append mode
-//	char playerName[50];
-//	printf("Enter your name: ");
-//	scanf("%[^\n]", playerName);
-//	fprintf(file, "Player: %s, Score: %d\n", playerName, score);
-//	fclose(file);
-
-	FILE *file = fopen("winner.data", "w");
-	for(int i=0; i<100; i++){
-		fprintf(file, "Player: %s, Score: %d", "Unknown", highScores[i]);
-	}
+	FILE *file = fopen("winner.data", "a"); //append mode
+	char playerName[50];
+	printf("Enter your name: ");
+	scanf("%[^\n]", playerName);
+	fprintf(file, "Player: %s, Score: %d\n", playerName, score);
 	fclose(file);
+
  
 	return 0;
 }
