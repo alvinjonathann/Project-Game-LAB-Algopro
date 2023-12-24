@@ -1,3 +1,5 @@
+// 2702252102 - Alvin Jonathan
+// 2702309441 - Jason Yoswara
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
@@ -7,13 +9,13 @@ char map[20][40];
 char player = '^';
 char tail = '*';
 char food = 'x';
-int x = 5, y = 5;
+int x = 5, y = 5;	//koordinat spawn player
 int panjang = 40, lebar = 20;
 int xTail[100];
 int yTail[100];
 int totalTail = 2;
 int maxTail = 100;
-int xFood, yFood;
+int xFood, yFood;	//koordinat makanan
 int score = 0;
 
 void createMap(){
@@ -86,7 +88,7 @@ void moveDown(){
 		printf("Game Over!\n");
 		printf("Snake crashed into the wall!\n");
 		// save player data ke file
-        FILE *file = fopen("winner.data", "a"); //append mode
+        FILE *file = fopen("winner.data", "a"); 
         char playerName[50];
         printf("Enter your name: ");
         scanf("%[^\n]", playerName);
@@ -106,7 +108,7 @@ void moveLeft(){
 		printf("Game Over!\n");
 		printf("Snake crashed into the wall!\n");
 		// save player data ke file
-        FILE *file = fopen("winner.data", "a"); //append mode
+        FILE *file = fopen("winner.data", "a"); 
         char playerName[50];
         printf("Enter your name: ");
         scanf("%[^\n]", playerName);
@@ -126,7 +128,7 @@ void moveRight(){
 		printf("Game Over!\n");
 		printf("Snake crashed into the wall!\n");
 		// save player data ke file
-        FILE *file = fopen("winner.data", "a"); //append mode
+        FILE *file = fopen("winner.data", "a"); 
         char playerName[50];
         printf("Enter your name: ");
         scanf("%[^\n]", playerName);
@@ -244,7 +246,7 @@ int main(){
 	printf("You Win With Score : %d\n", score);
 	
 	// save player data ke file
-	FILE *file = fopen("winner.data", "a"); //append mode
+	FILE *file = fopen("winner.data", "a"); 
 	char playerName[50];
 	printf("Enter your name: ");
 	scanf("%[^\n]", playerName);
